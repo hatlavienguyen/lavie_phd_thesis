@@ -38,7 +38,8 @@ Other members of the Department of Geological Sciences, Computer Science, and Ph
 Family and friends 
 
 ## License
-GNU Lesser General Public License v3.0
+GNU LESSER GENERAL PUBLIC LICENSE
+ Version 2.1, February 1999
 
 For more information, refer to LICENSE
 
