@@ -10,9 +10,6 @@ For any support, please feel welcome to directly contact the author - Hoang Anh 
 ## Contributing
 We encourage any feedback and sincerely appreciate for any suggestion to improve various aspect of this workflow.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
 ## Copyright Hoang Anh Tu (Lavie) Nguyen, 2025. All rights reserved.
 ## Permission to use - same as the thesis which associates with this repository
 
