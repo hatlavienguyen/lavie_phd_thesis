@@ -9,9 +9,9 @@ For any support, please feel welcome to directly contact the author - Hoang Anh 
 If you are interested in the output kinematic line features that we semi-automatically generated for the MER2021 model, please contact Hoang Anh Tu (Lavie) Nguyen-Ridgway at hoanganhtu.nguye@usask.ca
 
 ## Basic installing requirement
-We used Anaconda to help us setup the Python environment as well as manage all packages for this project. We hence recommend using Anaconda to install Python 3.8 and setup the environment to run all modules. We created the text file called "python_requirement_packages.txt" which contains all required Python packages. After downloading Anaconda, we suggest running the following in the Anaconda Prompt: 
-conda create --name new_env_name python=3.x #to create the working a new Python environment for the project. 
-pip install -r requirements.txt
+We used Anaconda to help us setup the Python environment as well as manage all packages for this project. We hence recommend using Anaconda to install Python 3.8 and setup the environment to run all modules. We created the text file called "python_requirement_packages.txt" which contains all required Python packages. After downloading Anaconda, we suggest running the following in the Anaconda Prompt:
+    '''{conda create --name new_env_name python=3.x #to create the working a new Python environment for the project. 
+    pip install -r requirements.txt}'''
 
 ## Contributing
 We encourage any feedback and sincerely appreciate for any suggestion to improve various aspect of this workflow.
