@@ -13,7 +13,8 @@ We used Anaconda to help us setup the Python environment as well as manage all p
     ```conda create --name new_env_name python=3.x #to create the working a new Python environment for the project``` 
     ```pip install -r requirements.txt```
 
-# Example of Python GIS Environment Setup with `uv`. I, Hoang Anh Tu Lavie Nguyen-Ridgway, acknowledge the use of GPT Engine Copilot to create the instruction below to install Python and setup a Python working environment by using `uv` 
+## Example of Python GIS Environment Setup with `uv`. 
+I, Hoang Anh Tu Lavie Nguyen-Ridgway, acknowledge the use of GPT Engine Copilot to create the instruction below to install Python and setup a Python working environment by using `uv` 
 
 This guide provides a simple workflow for beginners to install **Python 3.11**, **JupyterLab**, and common GIS/data analysis packages using **uv** instead of Conda.
 
