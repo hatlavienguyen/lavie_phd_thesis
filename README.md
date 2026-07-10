@@ -324,7 +324,8 @@ Kevin Ansdell - University of Saskatchewan;
 Alec Aitken - University of Saskatchewan;
 John Cannon - University of Sydney;
 Other members of the Department of Geological Sciences, Computer Science, and Physics at USASK;
-Family and friends 
+Family and friends;
+Use of GPT Engine such as Copilot and Gemini to assist with programming, English grammar and wording 
 
 ## License
 GNU LESSER GENERAL PUBLIC LICENSE
