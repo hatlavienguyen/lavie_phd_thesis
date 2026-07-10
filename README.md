@@ -13,6 +13,291 @@ We used Anaconda to help us setup the Python environment as well as manage all p
     ```conda create --name new_env_name python=3.x #to create the working a new Python environment for the project``` 
     ```pip install -r requirements.txt```
 
+# Example of Python GIS Environment Setup with `uv`. I, Hoang Anh Tu Lavie Nguyen-Ridgway, acknowledge the use of GPT Engine Copilot to create the instruction below to install Python and setup a Python working environment by using `uv` 
+
+This guide provides a simple workflow for beginners to install **Python 3.11**, **JupyterLab**, and common GIS/data analysis packages using **uv** instead of Conda.
+
+## Requirements
+
+The environment will include:
+
+- Python 3.11
+- JupyterLab
+- GeoPandas
+- Pandas
+- NumPy
+- PyProj
+- Shapely
+
+---
+
+## 1. Install uv
+
+### Windows (PowerShell)
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm iex"
+```
+
+### macOS / Linux
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Verify installation:
+
+```bash
+uv --version
+```
+
+---
+
+## 2. Create a Project Folder
+
+Create a folder for your GIS project:
+
+```text
+GIS_Project
+```
+
+Open a terminal inside that folder.
+
+---
+
+## 3. Initialize the Project
+
+```bash
+uv init
+```
+
+This creates a basic Python project structure.
+
+---
+
+## 4. Install Python 3.11
+
+```bash
+uv python install 3.11
+```
+
+Verify available Python versions:
+
+```bash
+uv python list
+```
+
+---
+
+## 5. Create a Virtual Environment
+
+```bash
+uv venv --python 3.11
+```
+
+This creates a local virtual environment named:
+
+```text
+.venv
+```
+
+---
+
+## 6. Activate the Environment
+
+### Windows
+
+```powershell
+.venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+source .venv/bin/activate
+```
+
+The prompt should now show:
+
+```text
+(.venv)
+```
+
+---
+
+## 7. Install Required Packages
+
+```bash
+uv pip install geopandas pandas numpy pyproj shapely jupyterlab
+```
+
+This installs all required GIS and data analysis libraries.
+
+---
+
+## 8. Verify the Installation
+
+Start Python:
+
+```bash
+python
+```
+
+Test the packages:
+
+```python
+import geopandas as gpd
+import pandas as pd
+import numpy as np
+import pyproj
+import shapely
+
+print("Success!")
+```
+
+Exit Python:
+
+```python
+exit()
+```
+
+---
+
+## 9. Launch JupyterLab
+
+Start JupyterLab:
+
+```bash
+jupyter lab
+```
+
+A browser window should open automatically.
+
+Create a new notebook:
+
+```text
+File → New Notebook → Python 3
+```
+
+---
+
+## 10. Test GeoPandas
+
+Run the following code in a notebook cell:
+
+```python
+import pandas as pd
+import geopandas as gpd
+from shapely.geometry import Point
+
+df = pd.DataFrame({
+    "City": ["Saskatoon", "Regina"],
+    "Longitude": [-106.67, -104.62],
+    "Latitude": [52.13, 50.45]
+})
+
+geometry = [
+    Point(xy)
+    for xy in zip(df["Longitude"], df["Latitude"])
+]
+
+gdf = gpd.GeoDataFrame(
+    df,
+    geometry=geometry,
+    crs="EPSG:4326"
+)
+
+gdf
+```
+
+Press:
+
+```text
+Shift + Enter
+```
+
+You should see a GeoDataFrame displayed in the notebook.
+
+---
+
+## Daily Workflow
+
+Whenever you return to the project:
+
+### Activate the Environment
+
+**Windows**
+
+```powershell
+.venv\Scripts\activate
+```
+
+**macOS/Linux**
+
+```bash
+source .venv/bin/activate
+```
+
+### Start JupyterLab
+
+```bash
+jupyter lab
+```
+
+---
+
+## Installing Additional Packages
+
+Add new packages whenever needed:
+
+```bash
+uv pip install matplotlib openpyxl pyarrow rtree
+```
+
+---
+
+## Recommended Project Structure
+
+```text
+GIS_Project/
+│
+├── .venv/
+├── notebooks/
+│   └── analysis.ipynb
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── outputs/
+│
+└── pyproject.toml
+```
+
+This structure helps keep notebooks, source data, and outputs organized.
+
+---
+
+## Why Use JupyterLab?
+
+For beginners, JupyterLab is often easier than a traditional IDE because it allows you to:
+
+- Run code one cell at a time
+- Immediately see results
+- Combine code, notes, and visualizations
+- Explore data interactively
+- Learn Python and GeoPandas more easily
+
+A common beginner-friendly GIS workflow is:
+
+1. Install `uv`
+2. Create a Python 3.11 virtual environment
+3. Install GeoPandas and related packages
+4. Use JupyterLab for analysis and experimentation
+5. Move to VS Code later for larger projects
+
+
+
 ## Contributing
 We encourage any feedback and sincerely appreciate for any suggestion to improve various aspect of this workflow.
 
